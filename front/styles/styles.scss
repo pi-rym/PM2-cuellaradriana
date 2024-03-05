@@ -1,0 +1,14 @@
+/* Fuentes y otros import */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee+Shade&family=Madimi+One&family=Mukta+Vaani:wght@200;300;400&display=swap');
+
+/* Reset */
+@import 'reset';
+
+/* Variables y mixins */
+@import 'var';
+
+/* Módulos */
+@import 'body';
+@import 'header';
+@import 'mainIndex';
+@import 'footer';

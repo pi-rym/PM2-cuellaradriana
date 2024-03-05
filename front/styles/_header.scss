@@ -1,0 +1,49 @@
+header {
+    width: 100%;
+    #headerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #logoContainer {
+            width: 20%;
+            display: flex;
+            img {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+        nav {
+            width: 50%;
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li {
+                    font-size: 1.1rem;
+                    padding: 10px;
+                    a {
+                        padding: 5px;
+                    }
+                    .focusNav {
+                        color: $neonGreen;
+                        font-size: 1.3rem;
+                        text-shadow: 1px 1px 1px
+                            rgba($color: #d3d94f, $alpha: 0.5);
+                    }
+                    #lastFocusNav {
+                        font-size: 1.5rem;
+                        text-shadow: 1px 1px 2px $lightGreen;
+                    }
+                }
+            }
+        }
+        h1 {
+            width: 30%;
+            font-size: 2rem;
+            text-align: center;
+            font-family: 'Bungee Shade', sans-serif;
+            text-shadow: 2px 2px 4px $darkBlue;
+        }
+    }
+}

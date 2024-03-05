@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/* Fuentes y otros import */
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee+Shade&family=Madimi+One&family=Mukta+Vaani:wght@200;300;400&display=swap");
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Variables y mixins */
+/* Paleta de Colores */
+/* Fuentes */
+/* Módulos */
+body {
+  width: 100%;
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: "Mukta Vaani", sans-serif;
+}
+
+header {
+  width: 100%;
+}
+header #headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #headerContainer #logoContainer {
+  width: 20%;
+  display: flex;
+}
+header #headerContainer #logoContainer img {
+  width: 70%;
+  margin: 0 auto;
+}
+header #headerContainer nav {
+  width: 50%;
+}
+header #headerContainer nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #headerContainer nav ul li {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+header #headerContainer nav ul li a {
+  padding: 5px;
+}
+header #headerContainer nav ul li .focusNav {
+  color: #d3d94f;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 1px rgba(211, 217, 79, 0.5);
+}
+header #headerContainer nav ul li #lastFocusNav {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px #969d41;
+}
+header #headerContainer h1 {
+  width: 30%;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Bungee Shade", sans-serif;
+  text-shadow: 2px 2px 4px rgb(23, 32, 55);
+}
+
+#mainIndex {
+  width: 100%;
+}
+#mainIndex section {
+  width: 100%;
+  padding: 5%;
+}
+#mainIndex section #containerMoviesCards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#mainIndex section #containerMoviesCards .movieCard {
+  width: 30%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#mainIndex section #containerMoviesCards .movieCard .imgCard {
+  height: 70%;
+}
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer {
+  width: 100%;
+  text-shadow: 1px 1px 3px #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .titleCard {
+  font-family: "Madimi One", sans-serif;
+  font-size: 1.1rem;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20%;
+}
+footer #formAndSMContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}/*# sourceMappingURL=styles.css.map */

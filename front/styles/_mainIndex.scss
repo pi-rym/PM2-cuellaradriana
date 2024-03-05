@@ -1,0 +1,39 @@
+#mainIndex {
+    width: 100%;
+    section {
+        width: 100%;
+        padding: 5%;
+        #containerMoviesCards {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            .movieCard {
+                width: 30%;
+                height: 70vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                .imgCard {
+                    height: 70%;
+                }
+                .textCardContainer {
+                    width: 100%;
+                    text-shadow: 1px 1px 3px $black;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    text-align: center;
+                    .titleCard {
+                        font-family: 'Madimi One', sans-serif;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
