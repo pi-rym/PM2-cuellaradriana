@@ -1,24 +1,29 @@
-// console.log(tempData);
 const cardMovie = (movie) => {
-    return `<div class='movieCard'>
-                <img class='imgCard' src='${movie.poster}'>
-                <div class='textCardContainer'>
-                    <h3 class='titleCard'>${movie.title}</h3>                
-                    <p class='directorCard'> Director: ${movie.director}</p>
-                    <p class='rateCard'> Rate: ${movie.rate}</p>
-                    <p class='durationCard'> Duration: ${movie.duration}</p>
-                </div>
-            </div>`;
+    const cardMovie = document.createElement('div');
+    cardMovie.classList.add('movieCard');
+    cardMovie.innerHTML = `<img class='imgCard' src='${movie.poster}'>
+                            <div class='textCardContainer'>
+                            <h3 class='titleCard'>${movie.title}</h3>                
+                            <p class='directorCard'> Director: ${movie.director}</p>
+                            <p class='durationCard'> Duration: ${movie.duration}</p>
+                            <p class='rateCard'> Rate: ${movie.rate}</p>
+                            <h4>CUP CINEMA</h4>
+                        </div>`;
+    return cardMovie;
 };
 
-const renderHTML = (movies, container) => {
-    container.innerHTML = '';
-    for (const movie of movies) {
-        const movieInHTML = cardMovie(movie);
-        container.innerHTML += movieInHTML;
-    }
+const renderHTML = (dataMovies) => {
+    const containerMoviesCards = document.getElementById(
+        'containerMoviesCards'
+    );
+    containerMoviesCards.innerHTML = '';
+    const movies = dataMovies;
+    const moviesHTML = movies.map(cardMovie);
+    moviesHTML.forEach((movie) => {
+        containerMoviesCards.appendChild(movie);
+    });
 };
 
-const containerMoviesCards = document.querySelector('#containerMoviesCards');
-
-renderHTML(tempData, containerMoviesCards);
+$.get('https://students-api.2.us-1.fl0.io/movies', (data) => {
+    renderHTML(data);
+});

@@ -16,21 +16,71 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
+                transition: 1s;
+                position: relative;
+                overflow: hidden;
                 .imgCard {
-                    height: 70%;
+                    height: 100%;
+                    box-shadow: 8px 8px 15px $neonGreen;
+                    border-radius: 10px;
                 }
                 .textCardContainer {
-                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    transition: left 0.3s ease;
+                    .titleCard,
+                    .directorCard,
+                    .durationCard,
+                    .rateCard,
+                    h4 {
+                        display: none;
+                    }
+                }
+            }
+            .movieCard:hover {
+                .textCardContainer {
+                    height: 100%;
+                    width: 80%;
+                    position: absolute;
+                    margin-right: 1.5%;
+                    background-color: rgba($darkBlue, $alpha: 0.9);
                     text-shadow: 1px 1px 3px $black;
                     border-radius: 10px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-around;
+                    justify-content: center;
                     align-items: center;
                     text-align: center;
+                    left: 10%;
                     .titleCard {
+                        display: block;
                         font-family: 'Madimi One', sans-serif;
-                        font-size: 1.1rem;
+                        font-size: 2rem;
+                        color: $neonGreen;
+                    }
+                    .directorCard,
+                    .durationCard {
+                        display: block;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        text-shadow: 1px 1px 1px $black;
+                    }
+                    .rateCard {
+                        display: block;
+                        padding: 10px;
+                        background-color: $neonGreen;
+                        color: $darkGreen;
+                        text-shadow: 1px 1px 1px $white;
+                        font-size: 1.5rem;
+                        font-family: 'Madimi One', sans-serif;
+                        border-radius: 10px;
+                        margin-top: 2%;
+                    }
+                    h4 {
+                        display: block;
+                        font-family: 'Bungee Shade', sans-serif;
+                        padding-top: 50%;
                     }
                 }
             }

@@ -112,7 +112,7 @@ header #headerContainer nav ul li .focusNav {
 }
 header #headerContainer nav ul li #lastFocusNav {
   font-size: 1.5rem;
-  text-shadow: 1px 1px 2px #969d41;
+  text-shadow: 2px 2px 3px rgb(23, 32, 55);
 }
 header #headerContainer h1 {
   width: 30%;
@@ -143,23 +143,71 @@ header #headerContainer h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
 }
 #mainIndex section #containerMoviesCards .movieCard .imgCard {
-  height: 70%;
+  height: 100%;
+  box-shadow: 8px 8px 15px #d3d94f;
+  border-radius: 10px;
 }
 #mainIndex section #containerMoviesCards .movieCard .textCardContainer {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: left 0.3s ease;
+}
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .titleCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .directorCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .durationCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .rateCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer h4 {
+  display: none;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer {
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  margin-right: 1.5%;
+  background-color: rgba(23, 32, 55, 0.9);
   text-shadow: 1px 1px 3px #000;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  left: 10%;
 }
-#mainIndex section #containerMoviesCards .movieCard .textCardContainer .titleCard {
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .titleCard {
+  display: block;
   font-family: "Madimi One", sans-serif;
-  font-size: 1.1rem;
+  font-size: 2rem;
+  color: #d3d94f;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .directorCard,
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .durationCard {
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px #000;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .rateCard {
+  display: block;
+  padding: 10px;
+  background-color: #d3d94f;
+  color: #565d39;
+  text-shadow: 1px 1px 1px #fff;
+  font-size: 1.5rem;
+  font-family: "Madimi One", sans-serif;
+  border-radius: 10px;
+  margin-top: 2%;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer h4 {
+  display: block;
+  font-family: "Bungee Shade", sans-serif;
+  padding-top: 50%;
 }
 
 footer {
