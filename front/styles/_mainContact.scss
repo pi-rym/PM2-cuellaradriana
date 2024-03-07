@@ -1,0 +1,42 @@
+main {
+    width: 100%;
+    height: 75%;
+    section {
+        width: 100%;
+        height: 100%;
+        #mainContact {
+            width: 50%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            h1 {
+                width: 100%;
+                font-family: 'Madimi One', sans-serif;
+                font-size: 3rem;
+                color: $neonGreen;
+                text-align: center;
+            }
+            #formContainer {
+                width: 100%;
+                #sendForm,
+                #deleteForm {
+                    border: 1px solid $neonGreen;
+                    color: $neonGreen;
+                }
+                #sendForm:hover,
+                #deleteForm:hover {
+                    border: 1px solid $darkBlue;
+                    background-color: $darkBlue;
+                    color: $white;
+                }
+            }
+        }
+        #mainContact:hover {
+            background-color: rgba($lightGreen, $alpha: 0.3);
+            border-radius: 20px;
+        }
+    }
+}

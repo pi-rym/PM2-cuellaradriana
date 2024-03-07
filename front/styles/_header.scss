@@ -24,16 +24,32 @@ header {
                     padding: 10px;
                     a {
                         padding: 5px;
+                        transition: 1s;
+                    }
+                    .focusNav,
+                    a:hover {
+                        color: $neonGreen;
+                        font-size: 1.5rem;
+                        font-family: 'Madimi One', sans-serif;
+                        text-shadow: 1px 1px 1px
+                            rgba($color: $neonGreen, $alpha: 0.5);
                     }
                     .focusNav {
-                        color: $neonGreen;
-                        font-size: 1.3rem;
-                        text-shadow: 1px 1px 1px
-                            rgba($color: #d3d94f, $alpha: 0.5);
+                        background-color: rgba($darkGreen, $alpha: 0.3);
+                        padding: 10px;
+                        border-radius: 10px;
+                    }
+                    #firstFocusNav {
+                        background-color: none;
                     }
                     #lastFocusNav {
                         font-size: 1.5rem;
-                        text-shadow: 2px 2px 3px $darkBlue;
+                        text-shadow: 1px 1px 1px $black;
+                        font-family: 'Madimi One', sans-serif;
+                        color: $neonGreen;
+                        background-color: rgba($darkBlue, $alpha: 0.8);
+                        padding: 10px;
+                        border-radius: 10px;
                     }
                 }
             }

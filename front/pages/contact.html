@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <title>CUP CINEMA-Other Cinema Webs</title>
+    </head>
+    <body>
+        <header>
+            <div id="headerContainer">
+                <div id="logoContainer">
+                    <img
+                        src="../assets/images/logoCUPCinema.png"
+                        alt="logo CUP Cinema"
+                    />
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li>
+                            <a href="./history.html">History Cinema</a>
+                        </li>
+                        <li>
+                            <a href="./aboutMyProject.html"
+                                >About My Projectd</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./contact.html" id="lastFocusNav">
+                                Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <h1>CUP CINEMA</h1>
+            </div>
+        </header>
+        <main>
+            <section>
+                <article id="mainContact">
+                    <h1>Contact</h1>
+                    <div id="formContainer">
+                        <form action="" id="formContact" class="m-3">
+                            <label for="name" class="form-label"
+                                >Tu Nombre y Apellido (requerido):</label
+                            ><br />
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="form-control"
+                                required
+                            /><br />
+                            <label for="email" class="form-label"
+                                >Tu correo electrónico (requerido):</label
+                            ><br />
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="name@example.com"
+                                required
+                            /><br />
+                            <label for="message" class="form-label"
+                                >Escribe aquí tu consulta</label
+                            >
+                            <textarea
+                                name="message"
+                                id="messageUser"
+                                rows="3"
+                                class="form-control"
+                                required
+                            ></textarea
+                            ><br />
+                            <input
+                                type="checkbox"
+                                name="subscription"
+                                id="subscription"
+                                class="form-check-input"
+                                checked
+                            />
+                            <label for="subscription" class="form-check-label"
+                                >Quiero recibir el Newsletter</label
+                            >
+                            <br />
+                            <input
+                                type="submit"
+                                value="Enviar consulta"
+                                id="sendForm"
+                                class="btn btn-outline-success mt-3 me-3"
+                            />
+                            <input
+                                type="reset"
+                                value="Borrar datos"
+                                id="deleteForm"
+                                class="btn btn-outline-success mt-3"
+                            /><br />
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div id="formAndSMContainer">
+                <div id="newsletterContainer">
+                    <form action="#" id="formContainer">
+                        <input
+                            type="email"
+                            name="email"
+                            id="emailFormFooter"
+                            placeholder="Your email"
+                            required
+                        />
+                        <input
+                            type="submit"
+                            value="Send"
+                            id="submitFormFooter"
+                        />
+                    </form>
+                </div>
+                <div id="socialMediaContainer">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div id="copyrightContainer">
+                &copy;Adriana Cuellar 2024. Proyecto M2 HENRY. Todos los
+                Derechos Reservados.
+            </div>
+        </footer>
+
+        <script src="./scripts/tempData.js"></script>
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>

@@ -19,9 +19,9 @@
                 transition: 1s;
                 position: relative;
                 overflow: hidden;
+                background-color: none;
                 .imgCard {
                     height: 100%;
-                    box-shadow: 8px 8px 15px $neonGreen;
                     border-radius: 10px;
                 }
                 .textCardContainer {
