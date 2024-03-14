@@ -1,9 +1,16 @@
+const { getMovies } = require('../services/movieService');
+
 // defino la función controladora de mi ruta de entidad 'movies'
-const getMovies = (req, res) => {
-    res.status(200).send(
-        'Proximamente encontrarás todos los datos de las películas'
-    );
+const getAllMovies = async (req, res) => {
+    try {
+        const movies = await getMovies();
+        res.status(200).json(movies);
+    } catch (error) {
+        res.status(500).json({
+            error: 'Error interno del servidor',
+        });
+    }
 };
 
 //disponibilizo
-module.exports = getMovies;
+module.exports = getAllMovies;

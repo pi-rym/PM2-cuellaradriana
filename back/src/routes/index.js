@@ -1,9 +1,7 @@
 //1. Requiero la clase Router de Express
 const { Router } = require('express');
-
 //1.2 Requiero a mi función controladora de mi ruta principal.
 const welcome = require('../controllers/index');
-
 //2. Requiero a mi ruta de entidad movies
 const moviesRoute = require('./moviesRoute');
 
