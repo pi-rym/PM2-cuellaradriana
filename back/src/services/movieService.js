@@ -16,13 +16,13 @@ class Movie {
 
 const getMovies = async () => {
     try {
-        const data = await axios.get(
+        const { data } = await axios.get(
             'https://students-api.up.railway.app/movies'
         );
-        const dataMovie = data.data;
+        const dataMovie = data;
         return dataMovie.map((movie) => new Movie(movie));
     } catch (error) {
-        console.error('Error al obtener las películas', error);
+        throw new Error('Error al obtener las películas', error);
     }
 };
 
