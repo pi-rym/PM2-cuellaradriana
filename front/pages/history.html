@@ -3,6 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/115266e0be.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="../styles/styles.css" />
         <title>CUP CINEMA-History</title>
     </head>
@@ -17,19 +32,22 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li>
+                            <a href="./moviesForm.html">Agregá Películas</a>
+                        </li>
                         <li>
                             <a href="./history.html" class="focusNav"
-                                >History Cinema</a
+                                >Historia del Cine</a
                             >
                         </li>
                         <li>
                             <a href="./aboutMyProject.html"
-                                >About My Projectd</a
+                                >Sobre Mi Proyecto</a
                             >
                         </li>
                         <li>
-                            <a href="./contact.html">Contact</a>
+                            <a href="./contact.html">Contacto</a>
                         </li>
                     </ul>
                 </nav>
@@ -39,31 +57,726 @@
         <main>
             <section>
                 <article id="containerHistory">
-                    <h1>History Cinema</h1>
+                    <div class="container container-sm">
+                        <h2 class="titlePage">Historia del Cine</h2>
+                        <div
+                            class="accordion"
+                            id="accordionPanelsStayOpenExample"
+                        >
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="myColor accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        Introducción
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseOne"
+                                    class="accordion-collapse collapse show"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            La historia del cine es la
+                                            rememoración de los
+                                            <strong
+                                                >inventos, inventores y eventos
+                                                que dieron nacimiento a la
+                                                cinematografía</strong
+                                            >. Se extiende desde sus inicios
+                                            mudos en blanco y negro, hasta sus
+                                            vertientes contemporáneas, digitales
+                                            y abundantes en efectos especiales
+                                            computarizados.
+                                        </p>
+                                        <p>
+                                            Esta es una historia que
+                                            <strong
+                                                >comprende casi dos siglos,
+                                                desde finales del XIX hasta el
+                                                tiempo presente</strong
+                                            >, y que va de la mano de la
+                                            invención fotográfica. El cine es
+                                            una técnica de captura, edición y
+                                            reproducción de imágenes y sonido.
+                                            Opera en base a soportes
+                                            fotosensibles, aparatos de
+                                            computación y proyectores
+                                            especializados, para ofrecer al
+                                            público espectador la impresión del
+                                            movimiento.
+                                        </p>
+                                        <p>
+                                            Esta técnica se ha perfeccionado en
+                                            nuestros días con la incorporación
+                                            de la tecnología digital y la
+                                            profesionalización del oficio
+                                            cinematográfico. Se ha logrado un
+                                            lenguaje artístico propio que
+                                            <strong
+                                                >hoy en día es reconocido como
+                                                el “noveno arte”</strong
+                                            >
+                                            y que, en tanto industria del
+                                            entretenimiento, moviliza cuantiosas
+                                            cantidades de dinero en el mundo
+                                            entero.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo"
+                                    >
+                                        Origen del cine
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseTwo"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            El origen formal del cine
+                                            <strong
+                                                >se remonta al siglo XIX, con la
+                                                invención de la
+                                                fotografía.</strong
+                                            >
+                                            Con ella se dieron los primeros
+                                            pasos hacia la generación de la
+                                            impresión del movimiento, gracias a
+                                            la persistencia retiniana (la mínima
+                                            perduración de las imágenes vistas
+                                            en la retina humana cuando se
+                                            proyectan a gran velocidad) y al
+                                            principio de la cámara oscura.
+                                        </p>
+                                        <p>
+                                            La primera proyección fílmica
+                                            exhibida al público tuvo lugar en
+                                            París el 28 de diciembre de 1895.
+                                            Consistía en
+                                            <strong
+                                                >una proyección de la salida de
+                                                unos obreros de una fábrica en
+                                                Lyon</strong
+                                            >. Fue grabada por los célebres
+                                            hermanos Lumière, quienes en un año
+                                            produjeron más de 500 películas de
+                                            no más de un minuto de duración.
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >A esa primera proyección
+                                                acudieron apenas 35
+                                                personas</strong
+                                            >, pero la voz se corrió muy
+                                            rápidamente en París y pronto hubo
+                                            multitudes deseosas de ver el nuevo
+                                            invento, anunciado como
+                                            <em>Cinématographe Lumière.</em>
+                                        </p>
+                                        <p>
+                                            También es célebre la anécdota de
+                                            que una de sus primeras proyecciones
+                                            <strong
+                                                >involucró la filmación frontal
+                                                de un tren que llegaba a la
+                                                estación</strong
+                                            >. El público asistente, temeroso de
+                                            que el tren los atropellara, huía de
+                                            la sala.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree"
+                                    >
+                                        Antecedentes del cine
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseThree"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Para que la invención de los Lumière
+                                            pudiera existir,
+                                            <strong
+                                                >numerosos descubrimientos
+                                                tuvieron que darse
+                                                previamente</strong
+                                            >. Algunos incluso se remontan al
+                                            siglo XVI, cuando el sacerdote
+                                            alemán Atanasio Kircher inventó la
+                                            linterna mágica, un aparato de
+                                            imágenes rotativas que simulaba el
+                                            movimiento y servía para entretener
+                                            a los niños.
+                                        </p>
+                                        <p>
+                                            En el siglo XVIII, Gaspard Robert
+                                            popularizó la proyección pública de
+                                            imágenes pintadas sobre placas de
+                                            cristal, que bautizó como
+                                            <em>Fantasmagories</em>.
+                                            <strong
+                                                >En el siglo XIX hubo más
+                                                experimentos con imágenes en
+                                                movimiento</strong
+                                            >. Uno de los más importantes fue el
+                                            estroboscopio (1833) de Simon von
+                                            Stampfer que permitía ver a
+                                            velocidades muy lentas (o quieto) un
+                                            objeto que giraba sobre sí mismo.
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >En 1874 fue inventada la
+                                                fotografía</strong
+                                            >. Basándose en este invento, el
+                                            francés Jules Janssen creó el
+                                            “revólver fotográfico”, un
+                                            antepasado de la cámara fotográfica
+                                            de hoy. Poco después, el
+                                            estadounidense Edward Muybridge
+                                            logró reproducir el galopar de un
+                                            caballo a partir de fotografías
+                                            tomadas en serie de su carrera.
+                                        </p>
+                                        <p>
+                                            Pero el cine como tal sólo fue
+                                            posible cuando
+                                            <strong
+                                                >Thomas Alva Edison inventó la
+                                                bombilla incandescente en
+                                                1889</strong
+                                            >, y luego el kinetógrafo, un
+                                            aparato que sincronizaba el sonido y
+                                            la captura de una imagen, intentando
+                                            capturar el momento vivido. Este
+                                            último dio pie a la posterior
+                                            inclusión del audio en el cine.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseFour"
+                                    >
+                                        La magia de Georges Méliès
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseFour"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Uno de los grandes precursores del
+                                            cine fue Georges Méliès. Debido al
+                                            entusiasmo que le causó, decidió
+                                            invertir en la tecnología de los
+                                            hermanos Lumière.
+                                            <strong
+                                                >Propuso importantes
+                                                innovaciones</strong
+                                            >
+                                            que cambiaron el carácter
+                                            naturalista, realista y pasivo de
+                                            las grabaciones de los Lumière.
+                                        </p>
+                                        <p>
+                                            Por el contrario,
+                                            <strong>
+                                                Méliès creaba historias de
+                                                ficción dotadas de efectos
+                                                especiales,
+                                            </strong>
+                                            escenografías de cartón, maquillaje
+                                            y saltos en la edición. Se trataba
+                                            de fábulas infantiles y relatos
+                                            fantásticos, gracias a los que aún
+                                            hoy es recordado como el “mago del
+                                            cine”. Entre ellas estuvieron “Viaje
+                                            a la luna” (1902) y “El viaje
+                                            imposible” (1904), inspiradas en los
+                                            libros de Julio Verne.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseFive"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseFive"
+                                    >
+                                        Pioneros: León Gaumont y Alice Guy
+                                        Blaché
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseFive"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Otros
+                                            <strong
+                                                >importantes precursores del
+                                                cine a finales del siglo
+                                                XIX</strong
+                                            >
+                                            fueron León Gaumont y Alice Guy
+                                            Blaché, su secretaria y asociada.
+                                            Esta última, luego de presenciar las
+                                            proyecciones de los hermanos
+                                            Lumière, convenció a su jefe, quien
+                                            era dueño de una venta de aparatos
+                                            fotográficos, de incursionar en el
+                                            cine.
+                                        </p>
+                                        <p>
+                                            Juntos emprendieron
+                                            <strong
+                                                >la producción de filmes, que la
+                                                propia Guy guionaba y
+                                                filmaba</strong
+                                            >, entre ellos uno de los primeros
+                                            largometrajes de ficción: La fée aux
+                                            choux, “el hada de las coles” en
+                                            1896. En estos primeros filmes había
+                                            una importante presencia de técnicas
+                                            teatrales, y posteriormente se
+                                            incorporó tintura por primera vez,
+                                            permitiendo que las imágenes fueran
+                                            a color.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseSix"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseSix"
+                                    >
+                                        Pionero: Charles Pathé
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseSix"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Pathé fue otro
+                                            <strong
+                                                >emprendedor del cine fruto de
+                                                las exhibiciones de los hermanos
+                                                Lumière.</strong
+                                            >
+                                            Fabricó sus propias cámaras con las
+                                            que inició sus producciones. Además
+                                            intentó combinar el fonógrafo con el
+                                            cinematógrafo, para captar audio y
+                                            vídeo al mismo tiempo, aunque sin
+                                            mucho éxito.
+                                        </p>
+                                        <p>
+                                            Posteriormente,
+                                            <strong
+                                                >sí prosperó en el mundo
+                                                empresarial del cine</strong
+                                            >: fundó la primera empresa
+                                            cinematográfica que combinó las tres
+                                            ramas de la industria del cine:
+                                            producción, distribución y
+                                            exhibición, llamada
+                                            <em>Pathé Frères</em> (“Hermanos
+                                            Pathé”).
+                                        </p>
+                                        <p>
+                                            En esta empresa
+                                            <strong
+                                                >tuvieron lugar muchas
+                                                innovaciones del lenguaje
+                                                cinematográfico</strong
+                                            >, como los planos cinematográficos
+                                            cercanos, no generales. Se debieron
+                                            especialmente a Ferdinand Zecca,
+                                            quien hacía de actor, director,
+                                            guionista y decorador.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseSeven"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseSeven"
+                                    >
+                                        Cine mudo y cine sonoro
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseSeven"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Ya en 1902,
+                                            <strong
+                                                >Edison dio los primeros pasos
+                                                hacia el registro de audio e
+                                                imagen a la vez</strong
+                                            >, aunque con muy poca calidad
+                                            todavía. Además, gracias al
+                                            cronófono de León Gaumont en 1910,
+                                            la posibilidad de incluir sonido en
+                                            los filmes comenzó a vislumbrarse.
+                                        </p>
+                                        <p>
+                                            Sin embargo,
+                                            <strong
+                                                >el cine fue mudo durante sus
+                                                primeros 30 años</strong
+                                            >. Se continuó acompañando las
+                                            proyecciones con música en vivo
+                                            hasta 1927, cuando el primer
+                                            largometraje sonoro fue posible, a
+                                            través de la sincronización de un
+                                            disco reproducido al mismo tiempo
+                                            que el film. Esta primera película
+                                            sonora fue
+                                            <em>El cantor de Jazz</em> de la
+                                            <em>Warner Bros pictures Inc</em> en
+                                            Estados Unidos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseEight"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseEight"
+                                    >
+                                        El lenguaje cinematográfico
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseEight"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Los pioneros del lenguaje
+                                            cinematográfico, que acabaron con la
+                                            tendencia de filmar el cine como si
+                                            fuera teatro grabado, fueron dos:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <strong
+                                                    >David W. Griffith</strong
+                                                >. Cineasta estadounidense,
+                                                autor de El nacimiento de una
+                                                nación (1915), un filme mudo que
+                                                relataba la fundación de los
+                                                Estados Unidos y que fue la
+                                                primera superproducción fílmica
+                                                de la historia. Empleó por
+                                                primera vez planos alternados y
+                                                no fijos, una cámara móvil,
+                                                planos y tomas totales o
+                                                parciales y otros cambios que
+                                                fundaron parte del modo de hacer
+                                                cine que aún entendemos.
+                                            </li>
+                                            <li>
+                                                <strong
+                                                    >Sergei Eisenstein</strong
+                                                >. Cineasta de la Unión
+                                                Soviética cuya obra clave es
+                                                <em>El acorazado Potemkin</em>
+                                                (1925), filme mudo que narra el
+                                                motín dentro de un acorazado
+                                                zarista en plena Revolución de
+                                                Octubre. Es considerada la mejor
+                                                película de la historia y es de
+                                                las más estudiadas del cine,
+                                                dada su técnica de montaje, que
+                                                hizo escuela desde entonces. Es
+                                                el primer filme en usar imágenes
+                                                chocantes para generar una
+                                                reacción emocional en la
+                                                audiencia.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseNine"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseNine"
+                                    >
+                                        El cine a color
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseNine"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            La invención del cine a color
+                                            <strong
+                                                >fue una preocupación de los
+                                                pioneros del cine</strong
+                                            >, que como Méliès procedían a
+                                            colorear uno por uno los fotogramas
+                                            de sus filmes. Era una técnica muy
+                                            poco eficaz y costosa.
+                                        </p>
+                                        <p>
+                                            Sin embargo, en 1915 apareció
+                                            <em>Technicolor</em>, una compañía
+                                            que trabajó durante años en la
+                                            producción de sistemas fílmicos a
+                                            base de colores primarios, que
+                                            <strong
+                                                >permitieron inicialmente
+                                                insertar secuencias de color en
+                                                filmes de blanco y negro</strong
+                                            >. Recién en 1929 se proyectó el
+                                            primer largometraje a colores:
+                                            <em>On with the Show!</em>
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >En 1932 se incorporó un tercer
+                                                color a la paleta</strong
+                                            >
+                                            y se logró un sistema en base a los
+                                            tres primarios, que daba grandes
+                                            resultados. Fue empleado por Disney
+                                            en sus animaciones. Finalmente este
+                                            sistema fue reemplazado en 1950 por
+                                            el propuesto por la empresa
+                                            <em>Eastman Kodak</em>, mucho más
+                                            sencillo y eficaz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTen"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTen"
+                                    >
+                                        Hollywood y la meca del cine
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseTen"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong
+                                                >El éxito del cine en los
+                                                Estados Unidos fue
+                                                arrollador</strong
+                                            >. Thomas Alva Edison, quien era ya
+                                            un poderoso empresario nacional,
+                                            intentó quedarse con la propiedad
+                                            intelectual del cinematógrafo. Esto
+                                            le causó enormes tensiones con los
+                                            productores de cine independientes,
+                                            llegando el conflicto a juicios e
+                                            incluso a los disparos.
+                                        </p>
+                                        <p>
+                                            Como consecuencia,
+                                            <strong
+                                                >muchos creadores emigraron de
+                                                Nueva York</strong
+                                            >
+                                            hacia un pequeño poblado cerca de la
+                                            frontera con México, llamado
+                                            Hollywood. Allí nacieron los que aún
+                                            son algunos de los grandes estudios
+                                            fílmicos estadounidenses, como son
+                                            <em
+                                                >20th-Century Fox, Paramount,
+                                                Universal y
+                                                Metro-Goldwin-Mayer.</em
+                                            >
+                                        </p>
+                                        <p>
+                                            Los estudios no sólo producían y
+                                            financiaban las películas, sino que
+                                            también
+                                            <strong
+                                                >controlaban íntegramente la
+                                                distribución</strong
+                                            >. En poco tiempo lograron alzarse
+                                            como la “meca del cine”
+                                            estadounidense y dando inicio al
+                                            llamado <em>“Star System”</em> de
+                                            las grandes celebridades del cine.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseEleven"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseEleven"
+                                    >
+                                        El cine digital
+                                    </button>
+                                </h3>
+                                <div
+                                    id="panelsStayOpen-collapseEleven"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            El espíritu del cine
+                                            <strong
+                                                >cambió enormemente luego de la
+                                                aparición de las
+                                                computadoras.</strong
+                                            >
+                                            El mundo digital permitió, por un
+                                            lado, la filmación directamente en
+                                            formatos digitales mucho más
+                                            flexibles y de mejor rendimiento.
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >Se incorporaron efectos
+                                                especiales digitales </strong
+                                            >que no requerían de artificios
+                                            técnicos, sino de programas de
+                                            computación y post-producción.
+                                            Además se crearon nuevas técnicas de
+                                            animación y nuevos formatos
+                                            fílmicos, generando una verdadera
+                                            revolución en la industria.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <q
+                            >Historia del cine. Autor: Equipo editorial, Etecé.
+                            De: Argentina. Para: Enciclopedia Humanidades.
+                            Disponible en:
+                            https://humanidades.com/historia-del-cine/. Última
+                            edición: 9 enero, 2024. Consultado: 15 marzo,
+                            2024.</q
+                        >
+                    </div>
                 </article>
             </section>
         </main>
         <footer>
             <div id="formAndSMContainer">
                 <div id="newsletterContainer">
+                    <h4>
+                        Déjanos tu email si deseas recibir nuestras novedades y
+                        nuevas pelis
+                    </h4>
                     <form action="#" id="formContainer">
                         <input
                             type="email"
                             name="email"
                             id="emailFormFooter"
-                            placeholder="Your email"
+                            placeholder="Tu email"
                             required
                         />
                         <input
                             type="submit"
-                            value="Send"
+                            value="Enviar"
                             id="submitFormFooter"
                         />
                     </form>
                 </div>
                 <div id="socialMediaContainer">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
+                    <a
+                        href="https://www.linkedin.com/in/adriana-paola-cuellar-petit-541b5b2b8"
+                        target="_blank"
+                        ><i class="fa-brands fa-linkedin fa-2xl"></i
+                    ></a>
+                    <a href="https://github.com/cuellaradriana" target="_blank"
+                        ><i class="fa-brands fa-square-github fa-2xl"></i
+                    ></a>
                 </div>
             </div>
             <div id="copyrightContainer">
@@ -72,7 +785,6 @@
             </div>
         </footer>
 
-        <script src="./scripts/tempData.js"></script>
-        <script src="./scripts/index.js"></script>
+        <script src="../public/bundle.js"></script>
     </body>
 </html>

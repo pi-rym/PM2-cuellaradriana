@@ -12,13 +12,6 @@ main {
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            h1 {
-                width: 100%;
-                font-family: 'Madimi One', sans-serif;
-                font-size: 3rem;
-                color: $neonGreen;
-                text-align: center;
-            }
             #formContainer {
                 width: 100%;
                 #sendForm,

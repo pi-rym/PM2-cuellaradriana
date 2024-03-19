@@ -138,6 +138,16 @@ header #headerContainer h1 {
   text-shadow: 2px 2px 4px rgb(23, 32, 55);
 }
 
+.titlePage {
+  width: 100%;
+  font-family: "Madimi One", sans-serif;
+  font-size: 3rem;
+  color: #d3d94f;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 #mainIndex {
   width: 100%;
 }
@@ -226,6 +236,132 @@ header #headerContainer h1 {
   padding-top: 50%;
 }
 
+#movieFormContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#movieFormContainer span {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+#movieFormContainer form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(86, 93, 57, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#movieFormContainer form #formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#movieFormContainer form #formContainer label {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 1px #000;
+  color: #d3d94f;
+}
+#movieFormContainer form #formContainer #lastCheckbox label {
+  font-size: 1rem;
+  text-shadow: none;
+  color: #fff;
+}
+#movieFormContainer form #formContainer #title,
+#movieFormContainer form #formContainer #year,
+#movieFormContainer form #formContainer #director,
+#movieFormContainer form #formContainer #duration,
+#movieFormContainer form #formContainer #rate,
+#movieFormContainer form #formContainer #poster {
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  color: rgb(23, 32, 55);
+}
+#movieFormContainer form #formContainer #title,
+#movieFormContainer form #formContainer #poster {
+  width: 80%;
+}
+#movieFormContainer form #formContainer #year,
+#movieFormContainer form #formContainer #rate {
+  width: 20%;
+}
+#movieFormContainer form #formContainer #director,
+#movieFormContainer form #formContainer #duration {
+  width: 60%;
+}
+#movieFormContainer form #formContainer #formLeft,
+#movieFormContainer form #formContainer #formRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#movieFormContainer form #formContainer #formLeft {
+  margin-left: 1rem;
+}
+#movieFormContainer form #formContainer #formRight {
+  margin-right: 1rem;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup div {
+  display: flex;
+  width: 50%;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup div label {
+  font-size: 1rem;
+  text-shadow: none;
+  color: #fff;
+}
+#movieFormContainer form #buttonContainer {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#movieFormContainer form #buttonContainer #submit,
+#movieFormContainer form #buttonContainer #reset {
+  padding: 5px 10px;
+  background-color: inherit;
+  border: 1px solid #d3d94f;
+  color: #d3d94f;
+  border-radius: 10px;
+}
+#movieFormContainer form #buttonContainer #submit:hover,
+#movieFormContainer form #buttonContainer #reset:hover {
+  border: 1px solid rgb(23, 32, 55);
+  background-color: rgb(23, 32, 55);
+  color: #fff;
+  box-shadow: 1px 1px 3px #000;
+}
+
+#containerAboutMyProject {
+  margin: 1rem 3rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: rgba(86, 93, 57, 0.5);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #000;
+}
+#containerAboutMyProject p {
+  margin-bottom: 1rem;
+}
+
 main {
   width: 100%;
   height: 75%;
@@ -242,13 +378,6 @@ main section #mainContact {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-main section #mainContact h1 {
-  width: 100%;
-  font-family: "Madimi One", sans-serif;
-  font-size: 3rem;
-  color: #d3d94f;
-  text-align: center;
 }
 main section #mainContact #formContainer {
   width: 100%;
@@ -282,4 +411,54 @@ footer #formAndSMContainer {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+footer #formAndSMContainer #socialMediaContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer #formAndSMContainer #socialMediaContainer a {
+  margin: 0.5rem;
+}
+footer #formAndSMContainer #socialMediaContainer a i {
+  color: #d3d94f;
+}
+footer #formAndSMContainer #newsletterContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer #formAndSMContainer #newsletterContainer h4 {
+  font-family: "Madimi One", sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 0.5rem;
+}
+footer #formAndSMContainer #newsletterContainer #formContainer {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer #formAndSMContainer #newsletterContainer #formContainer #emailFormFooter,
+footer #formAndSMContainer #newsletterContainer #formContainer #submitFormFooter {
+  width: 60%;
+  font-family: inherit;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #d3d94f;
+  color: rgb(23, 32, 55);
+  border: 1px solid rgb(23, 32, 55);
+}
+footer #formAndSMContainer #newsletterContainer #formContainer #submitFormFooter {
+  width: 20%;
+  background-color: rgb(23, 32, 55);
+  border: 1px solid #d3d94f;
+  color: #d3d94f;
 }/*# sourceMappingURL=styles.css.map */

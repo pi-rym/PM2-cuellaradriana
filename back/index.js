@@ -1,7 +1,14 @@
-//Requiero mi servidor!
+require('dotenv').config();
+const { PORT } = process.env;
 const app = require('./src/server');
-//Guardo el puerto en una variable
-const PORT = 3000;
+const dbCon = require('./src/config/dbCon');
 
-//Dejo a mi servidor a la escucha de peticiones!
-app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
+dbCon()
+    .then((res) => {
+        app.listen(PORT, () =>
+            console.log(`Servidor escuchando en el puerto ${PORT}`)
+        );
+    })
+    .catch((err) => {
+        throw new Error('Error en conexión al servidor', err);
+    });

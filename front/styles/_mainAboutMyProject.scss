@@ -1,0 +1,11 @@
+#containerAboutMyProject {
+    margin: 1rem 3rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba($darkGreen, $alpha: 0.5);
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px $black;
+    p {
+        margin-bottom: 1rem;
+    }
+}
