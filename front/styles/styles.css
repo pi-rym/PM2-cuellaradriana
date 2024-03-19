@@ -270,11 +270,6 @@ header #headerContainer h1 {
   text-shadow: 1px 1px 1px #000;
   color: #d3d94f;
 }
-#movieFormContainer form #formContainer #lastCheckbox label {
-  font-size: 1rem;
-  text-shadow: none;
-  color: #fff;
-}
 #movieFormContainer form #formContainer #title,
 #movieFormContainer form #formContainer #year,
 #movieFormContainer form #formContainer #director,
@@ -303,12 +298,7 @@ header #headerContainer h1 {
   width: 50%;
   display: flex;
   flex-direction: column;
-}
-#movieFormContainer form #formContainer #formLeft {
-  margin-left: 1rem;
-}
-#movieFormContainer form #formContainer #formRight {
-  margin-right: 1rem;
+  margin-left: 1.5rem;
 }
 #movieFormContainer form #formContainer #formRight #checkboxContainer {
   width: 100%;
@@ -324,10 +314,14 @@ header #headerContainer h1 {
   display: flex;
   width: 50%;
 }
-#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup div label {
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup label span {
   font-size: 1rem;
   text-shadow: none;
   color: #fff;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup input:checked + label span {
+  color: #d3d94f;
+  text-shadow: 2px 2px 2px #000;
 }
 #movieFormContainer form #buttonContainer {
   width: 50%;
@@ -342,7 +336,9 @@ header #headerContainer h1 {
   color: #d3d94f;
   border-radius: 10px;
 }
-#movieFormContainer form #buttonContainer #submit:hover,
+#movieFormContainer form #buttonContainer #submit:disabled {
+  background-color: #969d41;
+}
 #movieFormContainer form #buttonContainer #reset:hover {
   border: 1px solid rgb(23, 32, 55);
   background-color: rgb(23, 32, 55);
