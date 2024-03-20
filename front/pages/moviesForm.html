@@ -76,6 +76,7 @@
                                     type="text"
                                     name="title"
                                     id="title"
+                                    class="inputKeyboard"
                                     placeholder="Guardians of the Galaxy Vol. 2"
                                 />
                             </div>
@@ -85,6 +86,7 @@
                                     type="number"
                                     name="year"
                                     id="year"
+                                    class="inputKeyboard"
                                     min="1900"
                                     max="2024"
                                     placeholder="2017"
@@ -96,6 +98,7 @@
                                     type="text"
                                     name="director"
                                     id="director"
+                                    class="inputKeyboard"
                                     placeholder="James Gunn"
                                 />
                             </div>
@@ -105,6 +108,7 @@
                                     type="text"
                                     name="duration"
                                     id="duration"
+                                    class="inputKeyboard"
                                     pattern="^[0-9]+h [0-9]+min$"
                                     placeholder="2h 16min"
                                 />
@@ -267,6 +271,7 @@
                                     type="number"
                                     name="rate"
                                     id="rate"
+                                    class="inputKeyboard"
                                     min="1"
                                     max="10"
                                     step="0.1"
@@ -279,22 +284,19 @@
                                     type="url"
                                     name="poster"
                                     id="poster"
+                                    class="inputKeyboard"
                                     placeholder="https://myposterofmovie.com/poster1"
                                 />
                             </div>
                         </div>
                     </div>
                     <div id="buttonContainer">
-                        <input
-                            type="submit"
-                            id="submit"
-                            value="Agregar Película"
-                        />
-                        <input
-                            type="reset"
-                            id="reset"
-                            value="Limpiar los campos"
-                        />
+                        <button type="submit" id="submit">
+                            Agregar Película
+                        </button>
+                        <button type="button" id="reset">
+                            Limpiar los campos
+                        </button>
                     </div>
                 </form>
             </section>
@@ -314,11 +316,9 @@
                             placeholder="Tu email"
                             required
                         />
-                        <input
-                            type="submit"
-                            value="Enviar"
-                            id="submitFormFooter"
-                        />
+                        <button type="submit" id="submitFormFooter">
+                            Enviar
+                        </button>
                     </form>
                 </div>
                 <div id="socialMediaContainer">

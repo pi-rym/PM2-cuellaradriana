@@ -1,24 +1,19 @@
-const titleField = document.getElementById('title');
-const yearField = document.getElementById('year');
-const directorField = document.getElementById('director');
-const durationField = document.getElementById('duration');
-const rateField = document.getElementById('rate');
-const posterField = document.getElementById('poster');
-const formMovie = document.getElementById('formMovie');
+const inputsKeyboard = document.querySelectorAll('.inputKeyboard');
+console.log(inputsKeyboard);
 
 const validateFields = () => {
-    if (
-        !titleField.value ||
-        !yearField.value ||
-        !directorField.value ||
-        !durationField.value ||
-        !rateField.value ||
-        !posterField.value
-    ) {
+    let control = 0;
+    inputsKeyboard.forEach((input) => {
+        if (!input.value) {
+            control++;
+        }
+    });
+    if (control > 0) {
         alert('Todos los campos deben estar completos');
         return false;
+    } else {
+        return true;
     }
-    return true;
 };
 
 const validateChb = () => {
@@ -33,30 +28,29 @@ const validateChb = () => {
 };
 
 const resetForm = () => {
-    formMovie.reset();
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((input) => {
+        if (input) {
+            input.value = '';
+        }
+    });
+    const genreFields = document.querySelectorAll(
+        'input[name="genre[]"]:checked'
+    );
+    genreFields.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
 };
 
 const initFormValidation = () => {
     formMovie.addEventListener('submit', (e) => {
         e.preventDefault();
-        const validChb = validateChb();
         const validFields = validateFields();
-        if (validChb && validFields) {
+        const validChb = validateChb();
+        if (validFields && validChb) {
+            resetForm();
             console.log('formulario enviado');
-            titleField.value = '';
-            yearField.value = '';
-            directorField.value = '';
-            durationField.value = '';
-            rateField.value = '';
-            posterField.value = '';
-            const genreFields = document.querySelectorAll(
-                'input[name="genre[]"]:checked'
-            );
-            genreFields.forEach((checkbox) => {
-                checkbox.checked = false;
-            });
         }
-        document.getElementById('reset').addEventListener('click', resetForm);
     });
 };
 
