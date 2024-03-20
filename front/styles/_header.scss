@@ -5,15 +5,15 @@ header {
         justify-content: space-between;
         align-items: center;
         #logoContainer {
-            width: 20%;
+            width: 15%;
             display: flex;
             img {
-                width: 70%;
+                width: 90%;
                 margin: 0 auto;
             }
         }
         nav {
-            width: 50%;
+            width: 55%;
             ul {
                 width: 100%;
                 display: flex;
@@ -55,11 +55,194 @@ header {
             }
         }
         h1 {
-            width: 30%;
+            width: 20%;
             font-size: 2rem;
             text-align: center;
             font-family: 'Bungee Shade', sans-serif;
             text-shadow: 2px 2px 4px $darkBlue;
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    header {
+        #headerContainer {
+            nav {
+                ul {
+                    li {
+                        a {
+                            padding: 0;
+                        }
+                        .focusNav,
+                        a:hover {
+                            font-size: 1.1rem;
+                        }
+                        .focusNav {
+                            padding: 5px;
+                        }
+                        #lastFocusNav {
+                            font-size: 1.1rem;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        width: 100%;
+        #headerContainer {
+            #logoContainer {
+                width: 13%;
+                display: flex;
+                img {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+            nav {
+                width: 57%;
+                ul {
+                    li {
+                        font-size: 1rem;
+                        padding: 5px;
+                        .focusNav,
+                        a:hover {
+                            font-size: 1rem;
+                        }
+                        .focusNav {
+                            border-radius: 7px;
+                        }
+                        #lastFocusNav {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                h1 {
+                    width: 18%;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    header {
+        padding-top: 1.5rem;
+        #headerContainer {
+            justify-content: space-around;
+            #logoContainer {
+                display: none;
+            }
+            nav {
+                width: 60%;
+            }
+            h1 {
+                width: 25%;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    header {
+        padding-top: 1.5rem;
+        #headerContainer {
+            justify-content: space-around;
+            #logoContainer {
+                display: none;
+            }
+            nav {
+                width: 70%;
+            }
+            h1 {
+                width: 20%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    header {
+        #headerContainer {
+            nav {
+                width: 75%;
+            }
+            h1 {
+                width: 18%;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        #headerContainer {
+            flex-direction: column-reverse;
+            #logoContainer {
+                display: none;
+            }
+            nav {
+                width: 80%;
+            }
+            h1 {
+                width: 50%;
+                margin-bottom: 1.5rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header {
+        #headerContainer {
+            nav {
+                width: 90%;
+            }
+            h1 {
+                width: 50%;
+                margin-bottom: 1.5rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    header {
+        #headerContainer {
+            nav {
+                width: 100%;
+                padding: 0 1rem;
+                ul {
+                    li {
+                        font-size: 0.8rem;
+                        .focusNav,
+                        a:hover {
+                            font-size: 0.8rem;
+                        }
+
+                        #lastFocusNav {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+            h1 {
+                width: 50%;
+                margin-bottom: 1.5rem;
+                font-size: 1.8rem;
+            }
         }
     }
 }

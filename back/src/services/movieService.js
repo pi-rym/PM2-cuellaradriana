@@ -9,6 +9,17 @@ const getMovies = async () => {
     }
 };
 
+const saveMovie = async (movie) => {
+    try {
+        const newMovie = new Movie(movie);
+        const savedMovie = await newMovie.save();
+        return savedMovie;
+    } catch (error) {
+        throw new Error('Error al enviar película a la base de datos', error);
+    }
+};
+
 module.exports = {
     getMovies,
+    saveMovie,
 };

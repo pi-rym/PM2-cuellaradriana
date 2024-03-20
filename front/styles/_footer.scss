@@ -37,7 +37,7 @@ footer {
                 text-shadow: 1px 1px 1px $black;
                 margin-bottom: 0.5rem;
             }
-            #formContainer {
+            #formContainerFooter {
                 width: 80%;
                 display: flex;
                 justify-content: space-evenly;
@@ -57,6 +57,68 @@ footer {
                     background-color: $darkBlue;
                     border: 1px solid $neonGreen;
                     color: $neonGreen;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1100px) {
+    footer {
+        #formAndSMContainer {
+            #socialMediaContainer {
+                width: 40%;
+            }
+            #newsletterContainer {
+                width: 60%;
+                h4 {
+                    font-size: 0.8rem;
+                }
+                #formContainerFooter {
+                    width: 80%;
+                    #emailFormFooter,
+                    #submitFormFooter {
+                        width: 60%;
+                    }
+                    #submitFormFooter {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        #formAndSMContainer {
+            #socialMediaContainer {
+                width: 30%;
+            }
+            #newsletterContainer {
+                width: 70%;
+                #formContainerFooter {
+                    width: 90%;
+                    #emailFormFooter,
+                    #submitFormFooter {
+                        width: 70%;
+                    }
+                    #submitFormFooter {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        #formAndSMContainer {
+            flex-direction: column;
+            #socialMediaContainer {
+                width: 100%;
+                #newsletterContainer {
+                    width: 100%;
                 }
             }
         }

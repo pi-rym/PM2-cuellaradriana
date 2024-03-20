@@ -7,3 +7,40 @@
     text-align: center;
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 1210px) {
+    .titlePage {
+        font-size: 2.8rem;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    .titlePage {
+        font-size: 2.6rem;
+    }
+}
+@media only screen and (max-width: 1010px) {
+    .titlePage {
+        font-size: 2.4rem;
+    }
+}
+@media only screen and (max-width: 910px) {
+    .titlePage {
+        font-size: 2.2rem;
+    }
+}
+@media only screen and (max-width: 810px) {
+    .titlePage {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 710px) {
+    .titlePage {
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 610px) {
+    .titlePage {
+        font-size: 1.6rem;
+    }
+}

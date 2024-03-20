@@ -1,13 +1,13 @@
-const renderCards = require('./renderCards');
-const axios = require('axios');
+const fetchMovies = require('./fetchMovies');
+const { addMovie, resetForm } = require('./validateForm');
 
-const fetchData = async () => {
-    try {
-        const { data } = await axios.get('http://localhost:3000/movies');
-        renderCards(data);
-    } catch (error) {
-        console.log(error.message);
-    }
-};
-
-fetchData();
+document.addEventListener('DOMContentLoaded', () => {
+    fetchMovies();
+    const formMovie = document.getElementById('formMovie');
+    formMovie?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        addMovie();
+    });
+    const reset = document.getElementById('reset');
+    reset?.addEventListener('click', resetForm);
+});

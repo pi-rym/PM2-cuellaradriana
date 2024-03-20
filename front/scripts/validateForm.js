@@ -1,30 +1,50 @@
-const inputsKeyboard = document.querySelectorAll('.inputKeyboard');
-console.log(inputsKeyboard);
+const axios = require('axios');
 
-const validateFields = () => {
-    let control = 0;
-    inputsKeyboard.forEach((input) => {
-        if (!input.value) {
-            control++;
-        }
-    });
-    if (control > 0) {
-        alert('Todos los campos deben estar completos');
-        return false;
-    } else {
-        return true;
+const validateFields = ({
+    title,
+    year,
+    director,
+    duration,
+    genres,
+    rate,
+    poster,
+}) => {
+    //verificando que los inputs donde se tipea no estén vacíos.
+    if ([!title, !year, !director, !duration, !rate, !poster].every(Boolean)) {
+        return 'Rellena todos los campos por favor';
     }
-};
 
-const validateChb = () => {
-    let genreFields = document.querySelectorAll('input:checked');
-    let genreSelecUser = [];
-    genreFields.forEach((chb) => genreSelecUser.push(chb.value));
-    if (genreSelecUser.length === 0) {
-        alert('Por favor selecciona al menos un género');
-        return false;
+    //Capturando los checkbox seleccionados para poder validar
+    let genreSelect = [];
+    genres.forEach((checkbox) => genreSelect.push(checkbox.value));
+    //Verificando que hayan seleccionado al menos 1 género
+    if (genreSelect.length === 0) {
+        return 'Debes seleccionar por lo menos un género';
     }
-    return true;
+
+    //Validando strings
+    if (director.length < 4 || director.length > 30) {
+        return 'El nombre del director debe contener entre 4 y 30 caracteres';
+    }
+    const regex = /^\d+h \d+min$/;
+    if (!regex.test(duration)) {
+        return 'La duración debe tener el formato específicado (2h 00min)';
+    }
+
+    //Validando números y fechas
+    if (rate < 1 || rate > 10) {
+        return 'La calificación debe estar entre 1 y 10';
+    }
+    if (year < 1900 || year > 2024) {
+        return 'El año debe estar entre 1900 y 2024';
+    }
+
+    //Validando url
+    if (!poster.includes('https://')) {
+        return 'En el poster no ingresaste una URL válida';
+    }
+
+    return null;
 };
 
 const resetForm = () => {
@@ -42,16 +62,49 @@ const resetForm = () => {
     });
 };
 
-const initFormValidation = () => {
-    formMovie.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const validFields = validateFields();
-        const validChb = validateChb();
-        if (validFields && validChb) {
-            resetForm();
-            console.log('formulario enviado');
-        }
+const addMovie = () => {
+    //Tomo los valores de los inputs y elimino espacios vacíos antes y después
+    const title = document.getElementById('title').value.trim();
+    const year = document.getElementById('year').value.trim();
+    const director = document.getElementById('director').value.trim();
+    const duration = document.getElementById('duration').value.trim();
+    const genres = document.querySelectorAll('input:checked');
+    const rate = document.getElementById('rate').value.trim();
+    const poster = document.getElementById('poster').value.trim();
+
+    let genre = [];
+    genres.forEach((checkbox) => genre.push(checkbox.value));
+
+    const newMovie = {
+        title,
+        year,
+        director,
+        duration,
+        genre,
+        rate,
+        poster,
+    };
+    console.log(newMovie);
+
+    //Validación
+    const error = validateFields({
+        title,
+        year,
+        director,
+        duration,
+        genres,
+        rate,
+        poster,
     });
+    if (error) return alert(error);
+    console.log(newMovie);
+    //verificación
+    axios
+        .post('http://localhost:3000/movies', newMovie)
+        .then(() => alert('Película Creada'))
+        .catch((error) => alert('error al crear la película' + error));
+    resetForm();
+    console.log(newMovie);
 };
 
-initFormValidation();
+module.exports = { addMovie, resetForm };

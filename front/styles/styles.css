@@ -82,15 +82,15 @@ header #headerContainer {
   align-items: center;
 }
 header #headerContainer #logoContainer {
-  width: 20%;
+  width: 15%;
   display: flex;
 }
 header #headerContainer #logoContainer img {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
 header #headerContainer nav {
-  width: 50%;
+  width: 55%;
 }
 header #headerContainer nav ul {
   width: 100%;
@@ -131,13 +131,157 @@ header #headerContainer nav ul li #lastFocusNav {
   border-radius: 10px;
 }
 header #headerContainer h1 {
-  width: 30%;
+  width: 20%;
   font-size: 2rem;
   text-align: center;
   font-family: "Bungee Shade", sans-serif;
   text-shadow: 2px 2px 4px rgb(23, 32, 55);
 }
 
+@media only screen and (max-width: 1250px) {
+  header #headerContainer nav ul li a {
+    padding: 0;
+  }
+  header #headerContainer nav ul li .focusNav,
+  header #headerContainer nav ul li a:hover {
+    font-size: 1.1rem;
+  }
+  header #headerContainer nav ul li .focusNav {
+    padding: 5px;
+  }
+  header #headerContainer nav ul li #lastFocusNav {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  header #headerContainer h1 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+    width: 100%;
+  }
+  header #headerContainer #logoContainer {
+    width: 13%;
+    display: flex;
+  }
+  header #headerContainer #logoContainer img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header #headerContainer nav {
+    width: 57%;
+  }
+  header #headerContainer nav ul li {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  header #headerContainer nav ul li .focusNav,
+  header #headerContainer nav ul li a:hover {
+    font-size: 1rem;
+  }
+  header #headerContainer nav ul li .focusNav {
+    border-radius: 7px;
+  }
+  header #headerContainer nav ul li #lastFocusNav {
+    font-size: 1rem;
+  }
+  header #headerContainer nav h1 {
+    width: 18%;
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  header {
+    padding-top: 1.5rem;
+  }
+  header #headerContainer {
+    justify-content: space-around;
+  }
+  header #headerContainer #logoContainer {
+    display: none;
+  }
+  header #headerContainer nav {
+    width: 60%;
+  }
+  header #headerContainer h1 {
+    width: 25%;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 860px) {
+  header {
+    padding-top: 1.5rem;
+  }
+  header #headerContainer {
+    justify-content: space-around;
+  }
+  header #headerContainer #logoContainer {
+    display: none;
+  }
+  header #headerContainer nav {
+    width: 70%;
+  }
+  header #headerContainer h1 {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  header #headerContainer nav {
+    width: 75%;
+  }
+  header #headerContainer h1 {
+    width: 18%;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  header #headerContainer {
+    flex-direction: column-reverse;
+  }
+  header #headerContainer #logoContainer {
+    display: none;
+  }
+  header #headerContainer nav {
+    width: 80%;
+  }
+  header #headerContainer h1 {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  header #headerContainer nav {
+    width: 90%;
+  }
+  header #headerContainer h1 {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  header #headerContainer nav {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  header #headerContainer nav ul li {
+    font-size: 0.8rem;
+  }
+  header #headerContainer nav ul li .focusNav,
+  header #headerContainer nav ul li a:hover {
+    font-size: 0.8rem;
+  }
+  header #headerContainer nav ul li #lastFocusNav {
+    font-size: 0.8rem;
+  }
+  header #headerContainer h1 {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
 .titlePage {
   width: 100%;
   font-family: "Madimi One", sans-serif;
@@ -148,6 +292,41 @@ header #headerContainer h1 {
   margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 1210px) {
+  .titlePage {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 1110px) {
+  .titlePage {
+    font-size: 2.6rem;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .titlePage {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .titlePage {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .titlePage {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .titlePage {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .titlePage {
+    font-size: 1.6rem;
+  }
+}
 #mainIndex {
   width: 100%;
 }
@@ -165,6 +344,7 @@ header #headerContainer h1 {
 #mainIndex section #containerMoviesCards .movieCard {
   width: 30%;
   height: 70vh;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,6 +416,21 @@ header #headerContainer h1 {
   padding-top: 50%;
 }
 
+@media only screen and (max-width: 1210px) {
+  #mainIndex section #containerMoviesCards .movieCard {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  #mainIndex section #containerMoviesCards .movieCard {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #mainIndex section #containerMoviesCards .movieCard {
+    width: 80%;
+  }
+}
 #movieFormContainer {
   padding: 1rem;
   display: flex;
@@ -336,9 +531,6 @@ header #headerContainer h1 {
   color: #d3d94f;
   border-radius: 10px;
 }
-#movieFormContainer form #buttonContainer #submit:disabled {
-  background-color: #969d41;
-}
 #movieFormContainer form #buttonContainer #reset:hover {
   border: 1px solid rgb(23, 32, 55);
   background-color: rgb(23, 32, 55);
@@ -346,6 +538,65 @@ header #headerContainer h1 {
   box-shadow: 1px 1px 3px #000;
 }
 
+@media only screen and (max-width: 1210px) {
+  #movieFormContainer span {
+    font-size: 1.3rem;
+  }
+  #movieFormContainer form {
+    width: 80%;
+  }
+  #movieFormContainer #buttonContainer {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #movieFormContainer span {
+    font-size: 1.1rem;
+  }
+  #movieFormContainer form {
+    width: 100%;
+  }
+  #movieFormContainer form #formContainer #year,
+  #movieFormContainer form #formContainer #rate {
+    width: 30%;
+  }
+  #movieFormContainer form #formContainer #formRight {
+    margin-left: 0;
+  }
+  #movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup {
+    width: 90%;
+  }
+  #movieFormContainer form #buttonContainer {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  #movieFormContainer span {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  #movieFormContainer form {
+    width: 100%;
+  }
+  #movieFormContainer form #formContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  #movieFormContainer form #formContainer #year,
+  #movieFormContainer form #formContainer #rate {
+    width: 30%;
+  }
+  #movieFormContainer form #formContainer #formRight,
+  #movieFormContainer form #formContainer #formLeft {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  #movieFormContainer form #buttonContainer {
+    width: 90%;
+  }
+}
 #containerAboutMyProject {
   margin: 1rem 3rem;
   padding: 1.5rem;
@@ -394,6 +645,16 @@ main section #mainContact:hover {
   border-radius: 20px;
 }
 
+@media only screen and (max-width: 1000px) {
+  main section #mainContact {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main section #mainContact {
+    width: 80%;
+  }
+}
 footer {
   width: 100%;
   margin-top: 3rem;
@@ -436,14 +697,14 @@ footer #formAndSMContainer #newsletterContainer h4 {
   text-shadow: 1px 1px 1px #000;
   margin-bottom: 0.5rem;
 }
-footer #formAndSMContainer #newsletterContainer #formContainer {
+footer #formAndSMContainer #newsletterContainer #formContainerFooter {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-footer #formAndSMContainer #newsletterContainer #formContainer #emailFormFooter,
-footer #formAndSMContainer #newsletterContainer #formContainer #submitFormFooter {
+footer #formAndSMContainer #newsletterContainer #formContainerFooter #emailFormFooter,
+footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
   width: 60%;
   font-family: inherit;
   padding: 10px;
@@ -452,9 +713,60 @@ footer #formAndSMContainer #newsletterContainer #formContainer #submitFormFooter
   color: rgb(23, 32, 55);
   border: 1px solid rgb(23, 32, 55);
 }
-footer #formAndSMContainer #newsletterContainer #formContainer #submitFormFooter {
+footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
   width: 20%;
   background-color: rgb(23, 32, 55);
   border: 1px solid #d3d94f;
   color: #d3d94f;
+}
+
+@media only screen and (max-width: 1100px) {
+  footer #formAndSMContainer #socialMediaContainer {
+    width: 40%;
+  }
+  footer #formAndSMContainer #newsletterContainer {
+    width: 60%;
+  }
+  footer #formAndSMContainer #newsletterContainer h4 {
+    font-size: 0.8rem;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter {
+    width: 80%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #emailFormFooter,
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 60%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  footer #formAndSMContainer #socialMediaContainer {
+    width: 30%;
+  }
+  footer #formAndSMContainer #newsletterContainer {
+    width: 70%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter {
+    width: 90%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #emailFormFooter,
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 70%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer #formAndSMContainer {
+    flex-direction: column;
+  }
+  footer #formAndSMContainer #socialMediaContainer {
+    width: 100%;
+  }
+  footer #formAndSMContainer #socialMediaContainer #newsletterContainer {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */
