@@ -9,20 +9,16 @@ const validateFields = ({
     rate,
     poster,
 }) => {
-    //verificando que los inputs donde se tipea no estén vacíos.
-    if ([!title, !year, !director, !duration, !rate, !poster].every(Boolean)) {
+    if (![title, year, director, duration, rate, poster].every(Boolean)) {
         return 'Rellena todos los campos por favor';
     }
-
-    //Capturando los checkbox seleccionados para poder validar
+    ///////////////////////
     let genreSelect = [];
     genres.forEach((checkbox) => genreSelect.push(checkbox.value));
-    //Verificando que hayan seleccionado al menos 1 género
     if (genreSelect.length === 0) {
         return 'Debes seleccionar por lo menos un género';
     }
-
-    //Validando strings
+    //////////////////////
     if (director.length < 4 || director.length > 30) {
         return 'El nombre del director debe contener entre 4 y 30 caracteres';
     }
@@ -30,20 +26,18 @@ const validateFields = ({
     if (!regex.test(duration)) {
         return 'La duración debe tener el formato específicado (2h 00min)';
     }
-
-    //Validando números y fechas
-    if (rate < 1 || rate > 10) {
-        return 'La calificación debe estar entre 1 y 10';
-    }
-    if (year < 1900 || year > 2024) {
-        return 'El año debe estar entre 1900 y 2024';
-    }
-
-    //Validando url
     if (!poster.includes('https://')) {
         return 'En el poster no ingresaste una URL válida';
     }
+    //////////////////////
+    if (rate < 1 || rate > 10) {
+        return 'La calificación debe estar entre 1 y 10';
+    }
+    if (year < 1895 || year > 2024) {
+        return 'El año debe estar entre 1900 y 2024';
+    }
 
+    ////////////////////
     return null;
 };
 
@@ -84,7 +78,6 @@ const addMovie = () => {
         rate,
         poster,
     };
-    console.log(newMovie);
 
     //Validación
     const error = validateFields({
@@ -96,15 +89,41 @@ const addMovie = () => {
         rate,
         poster,
     });
-    if (error) return alert(error);
-    console.log(newMovie);
-    //verificación
+    if (error) {
+        return Swal.fire({
+            icon: 'warning',
+            iconColor: '#172037',
+            title: 'Oh oh!',
+            text: error,
+            confirmButtonColor: '#172037',
+        });
+    }
+
+    //petición
     axios
         .post('http://localhost:3000/movies', newMovie)
-        .then(() => alert('Película Creada'))
-        .catch((error) => alert('error al crear la película' + error));
+        .then(() =>
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                iconColor: '#172037',
+                title: '¡Tu película ha sido almacenada, ve a "Inicio" para ver la magia!!!',
+                showConfirmButton: true,
+                timer: 4000,
+                confirmButtonColor: '#172037',
+            })
+        )
+        .catch((error) =>
+            Swal.fire({
+                icon: 'error',
+                iconColor: '#172037',
+                title: 'Oops...',
+                text:
+                    'Error al crear la película: ' + error.response.data.error,
+                confirmButtonColor: '#172037',
+            })
+        );
     resetForm();
-    console.log(newMovie);
 };
 
 module.exports = { addMovie, resetForm };

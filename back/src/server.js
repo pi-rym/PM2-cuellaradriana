@@ -17,5 +17,10 @@ app.use(express.json());
 //enlazo el router con el servidor
 app.use(router);
 
+//Nuevo manejador de errores
+app.use((err, req, res, next) => {
+    res.status(err.statusCode || 500).json({ error: err.message });
+});
+
 //disponibilizo
 module.exports = app;

@@ -6,3 +6,19 @@ body {
     color: $white;
     font-family: 'Mukta Vaani', sans-serif;
 }
+
+.swal2-popup .swal2-title,
+.swal2-popup .swal2-content {
+    font-family: 'Madimi One', sans-serif;
+    color: $white;
+    text-shadow: 2px 2px 2px $black;
+}
+
+.swal2-popup {
+    background-color: $lightGreen;
+    color: white;
+    font-family: 'Mukta Vaani', sans-serif;
+    text-shadow: 1px 1px 1px $black;
+    border-radius: 20px;
+    width: 25em;
+}

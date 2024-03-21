@@ -73,6 +73,22 @@ body {
   font-family: "Mukta Vaani", sans-serif;
 }
 
+.swal2-popup .swal2-title,
+.swal2-popup .swal2-content {
+  font-family: "Madimi One", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.swal2-popup {
+  background-color: #969d41;
+  color: white;
+  font-family: "Mukta Vaani", sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 20px;
+  width: 25em;
+}
+
 header {
   width: 100%;
 }
