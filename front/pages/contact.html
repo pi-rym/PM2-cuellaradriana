@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css"
+        />
         <script
             src="https://kit.fontawesome.com/115266e0be.js"
             crossorigin="anonymous"
@@ -68,6 +73,8 @@
                                 name="name"
                                 id="name"
                                 class="form-control"
+                                autocomplete="given-name"
+                                placeholder="Ejemplo: Julieta Marin"
                                 required
                             /><br />
                             <label for="email" class="form-label"
@@ -79,16 +86,19 @@
                                 id="email"
                                 class="form-control"
                                 placeholder="name@example.com"
+                                autocomplete="email"
                                 required
                             /><br />
-                            <label for="message" class="form-label"
+                            <label for="inquiry" class="form-label"
                                 >Escribe aquí tu consulta</label
                             >
                             <textarea
                                 name="message"
-                                id="messageUser"
+                                id="inquiry"
                                 rows="3"
                                 class="form-control"
+                                autocomplete="off"
+                                placeholder="Tu Consulta"
                                 required
                             ></textarea
                             ><br />
@@ -103,18 +113,20 @@
                                 >Quiero recibir el Newsletter</label
                             >
                             <br />
-                            <input
+                            <button
                                 type="submit"
-                                value="Enviar consulta"
                                 id="sendForm"
                                 class="btn btn-outline-success mt-3 me-3"
-                            />
-                            <input
+                            >
+                                Enviar consulta
+                            </button>
+                            <button
                                 type="reset"
-                                value="Borrar datos"
                                 id="deleteForm"
                                 class="btn btn-outline-success mt-3"
-                            /><br />
+                            >
+                                Borrar datos</button
+                            ><br />
                         </form>
                     </div>
                 </article>
@@ -157,6 +169,6 @@
             </div>
         </footer>
 
-        <!-- <script src="../public/bundle.js"></script> -->
+        <script src="../public/bundle.js"></script>
     </body>
 </html>
